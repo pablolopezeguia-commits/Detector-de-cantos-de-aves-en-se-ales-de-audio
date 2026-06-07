@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "birdsong-detector-ecocanto"
+version = "1.0.0"
+description = "Detector de cantos de aves en senales de audio: SVM con rasgos acusticos, YAMNet+MLP y EcoCanto."
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+authors = [{ name = "Pablo Lopez Eguia" }]
+dependencies = [
+  "tensorflow==2.20.0",
+  "tensorflow-hub==0.16.1",
+  "numpy==1.26.4",
+  "scipy==1.13.0",
+  "librosa==0.10.2",
+  "soundfile==0.12.1",
+  "sounddevice==0.4.7",
+  "pandas==2.2.2",
+  "scikit-learn>=1.4,<1.6",
+  "PyQt6==6.7.0",
+  "PyQt6-Qt6==6.7.0",
+  "PyQt6-sip==13.8.0",
+  "matplotlib==3.9.0",
+  "joblib>=1.3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==8.2.2", "pyinstaller==6.11.1"]
+
+[project.scripts]
+ecocanto = "birdsong_detector.ecocanto.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"birdsong_detector.ecocanto" = [
+  "assets/*",
+  "ui/*.qss",
+  "model/metadata.json",
+  "model/yamnet_final_mlp.keras",
+  "model/yamnet_base/saved_model.pb",
+  "model/yamnet_base/assets/*",
+  "model/yamnet_base/variables/*",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+markers = [
+  "slow: tests that load TensorFlow/YAMNet models",
+]

@@ -1,0 +1,22 @@
+{
+  "application": "EcoCanto",
+  "task": "binary bird-song detection",
+  "model": "YAMNet + MLP final",
+  "window_s": 3.0,
+  "overlap": 0.5,
+  "yamnet_sample_rate": 16000,
+  "embedding_dim": 1024,
+  "embedding_pooling": "temporal mean",
+  "default_threshold": 0.689144,
+  "segment_grouping": {
+    "max_gap_windows": 1,
+    "min_song_windows": 2
+  },
+  "output_files": [
+    "song segments CSV",
+    "non-song segments CSV",
+    "window-level CSV",
+    "window-run CSV",
+    "session JSON log"
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "classical_models": [
+    {
+      "name": "SVM inicial 0.2 s",
+      "family": "SVM RBF",
+      "features": "16 rasgos manuales",
+      "purpose": "Explorar microventanas"
+    },
+    {
+      "name": "SVM inicial 0.5 s",
+      "family": "SVM RBF",
+      "features": "16 rasgos manuales",
+      "purpose": "Explorar escala temporal"
+    },
+    {
+      "name": "SVM inicial 1.0 s",
+      "family": "SVM RBF",
+      "features": "16 rasgos manuales",
+      "purpose": "Explorar escala temporal"
+    },
+    {
+      "name": "SVM inicial 2.0 s",
+      "family": "SVM RBF",
+      "features": "16 rasgos manuales",
+      "purpose": "Explorar escala temporal"
+    },
+    {
+      "name": "SVM inicial 3.0 s",
+      "family": "SVM RBF",
+      "features": "16 rasgos manuales",
+      "purpose": "Primera referencia comparable con ventana larga"
+    },
+    {
+      "name": "SVM balanceado 0.2 s A",
+      "family": "SVM RBF",
+      "features": "16 rasgos manuales",
+      "purpose": "Control de balance 1:1"
+    },
+    {
+      "name": "SVM balanceado 0.2 s B",
+      "family": "SVM RBF",
+      "features": "16 rasgos manuales",
+      "purpose": "Replica de control"
+    },
+    {
+      "name": "SVM balanceado 3.0 s",
+      "family": "SVM RBF",
+      "features": "16 rasgos manuales",
+      "purpose": "Comparar balance y ventana de 3 s"
+    },
+    {
+      "name": "SVM con split por grabacion",
+      "family": "SVM RBF",
+      "features": "16 rasgos manuales",
+      "purpose": "Evitar fuga entre ventanas de la misma grabacion"
+    },
+    {
+      "name": "SVM ponderado por grupos",
+      "family": "SVM RBF",
+      "features": "16 rasgos manuales",
+      "purpose": "Controlar etiquetas debiles y grupos de audio"
+    },
+    {
+      "name": "SVM robusto",
+      "family": "SVM RBF",
+      "features": "16 rasgos manuales",
+      "purpose": "Primer intento conservador en campo"
+    },
+    {
+      "name": "SVM sensible",
+      "family": "SVM RBF",
+      "features": "16 rasgos manuales",
+      "purpose": "Medir el coste de priorizar recall"
+    },
+    {
+      "name": "SVM base final",
+      "family": "SVM RBF",
+      "features": "20 rasgos manuales",
+      "artifact": "models/classical_svm/svm_base_final.joblib"
+    },
+    {
+      "name": "SVM-conservador",
+      "family": "SVM RBF",
+      "features": "20 rasgos manuales + centroide positivo",
+      "artifact": "models/classical_svm/svm_conservative_centroid.joblib"
+    },
+    {
+      "name": "SVM-aumentado",
+      "family": "SVM RBF",
+      "features": "21 rasgos, entrenamiento aumentado",
+      "artifact": "models/classical_svm/svm_augmented.joblib"
+    },
+    {
+      "name": "SVM calibrado",
+      "family": "SVM RBF calibrado",
+      "features": "21 rasgos, probabilidades calibradas",
+      "artifact": "models/classical_svm/svm_calibrated.joblib"
+    },
+    {
+      "name": "SVM-sensible",
+      "family": "SVM RBF calibrado",
+      "features": "21 rasgos, umbral bajo",
+      "artifact": "models/classical_svm/svm_sensitive.joblib"
+    }
+  ],
+  "deep_models": [
+    {
+      "name": "YAMNet temprano",
+      "family": "YAMNet + MLP",
+      "features": "embedding medio 1024",
+      "purpose": "Primera referencia profunda"
+    },
+    {
+      "name": "YAMNet-base",
+      "family": "YAMNet + MLP",
+      "features": "embedding medio 1024",
+      "purpose": "Medir YAMNet sin entrenamiento final aumentado completo"
+    },
+    {
+      "name": "YAMNet-final",
+      "family": "YAMNet + MLP",
+      "features": "embedding medio 1024",
+      "artifact": "src/birdsong_detector/ecocanto/model/yamnet_final_mlp.keras",
+      "purpose": "Modelo integrado en EcoCanto"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+"""EcoCanto desktop application."""

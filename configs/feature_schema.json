@@ -1,0 +1,31 @@
+{
+  "manual_feature_count": 20,
+  "centroid_feature": "distance_to_positive_centroid_final",
+  "final_feature_count_with_centroid": 21,
+  "window_s": 3.0,
+  "overlap": 0.5,
+  "features": [
+    "max_amplitude",
+    "rms_amplitude",
+    "max_time_waveform",
+    "average_power_spectrogram",
+    "max_power_peak_power",
+    "delta_power_selection_spectrum",
+    "energy_spectrogram",
+    "aggregate_entropy_spectrogram",
+    "average_entropy_spectrogram",
+    "max_frequency_peak_frequency",
+    "frequency_5_percent",
+    "iqr_bandwidth",
+    "center_time",
+    "time_95_percent",
+    "iqr_duration",
+    "duration_90_percent",
+    "snr_estimated",
+    "band_ratio_bird_vs_low",
+    "n_prominent_peaks",
+    "spectral_concentration"
+  ],
+  "scaling_rule": "Fit StandardScaler on training windows only; transform validation, internal test, and field holdout without refitting.",
+  "centroid_rule": "Compute the positive centroid from positive training windows only."
+}

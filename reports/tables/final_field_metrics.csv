@@ -1,0 +1,21 @@
+model,family,precision,recall,f1,specificity,tn,fp,fn,tp
+SVM inicial 0.2 s,Tradicional,0.1727,1.0000,0.2945,0.0000,0,714,0,149
+SVM inicial 0.5 s,Tradicional,0.1727,1.0000,0.2945,0.0000,0,714,0,149
+SVM inicial 1.0 s,Tradicional,0.1729,1.0000,0.2948,0.0014,1,713,0,149
+SVM inicial 2.0 s,Tradicional,0.1845,0.9396,0.3084,0.1331,95,619,9,140
+SVM inicial 3.0 s,Tradicional,0.2169,0.8255,0.3436,0.3782,270,444,26,123
+SVM balanceado 0.2 s A,Tradicional,0.1727,1.0000,0.2945,0.0000,0,714,0,149
+SVM balanceado 0.2 s B,Tradicional,0.1727,1.0000,0.2945,0.0000,0,714,0,149
+SVM balanceado 3.0 s,Tradicional,0.2169,0.8255,0.3436,0.3782,270,444,26,123
+SVM con split por grabacion,Tradicional,1.0000,0.0201,0.0395,1.0000,714,0,146,3
+SVM ponderado por grupos,Tradicional,1.0000,0.0403,0.0774,1.0000,714,0,143,6
+SVM robusto,Tradicional,1.0000,0.0268,0.0523,1.0000,714,0,145,4
+SVM sensible temprano,Tradicional,1.0000,0.0403,0.0774,1.0000,714,0,143,6
+SVM base final,Tradicional,0.9900,0.6644,0.7952,0.9986,713,1,50,99
+SVM-conservador,Tradicional,1.0000,0.6711,0.8032,1.0000,714,0,49,100
+SVM-aumentado,Tradicional,0.7716,0.8389,0.8039,0.9482,677,37,24,125
+SVM calibrado,Tradicional,0.5520,0.9262,0.6917,0.8431,602,112,11,138
+SVM-sensible,Tradicional,0.2709,0.9799,0.4244,0.4496,321,393,3,146
+YAMNet temprano,Profundo,1.0000,0.3221,0.4873,1.0000,714,0,101,48
+YAMNet-base,Profundo,0.8000,0.9933,0.8862,0.9482,677,37,1,148
+YAMNet-final,Profundo,0.9673,0.9933,0.9801,0.9930,709,5,1,148

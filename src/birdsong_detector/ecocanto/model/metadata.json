@@ -1,0 +1,19 @@
+{
+  "model_id": "yamnet_mlp_final_augmented",
+  "app_name": "EcoCanto",
+  "training_date": "2026-05-11",
+  "umbral_operativo": 0.689144,
+  "ventana_s": 3.0,
+  "solape": 0.5,
+  "sample_rate": 16000,
+  "embedding_dim": 1024,
+  "dataset": "final_augmented_training_set",
+  "train_canto": 9683,
+  "train_nocanto": 2678,
+  "mlp_architecture": "BatchNorm -> Dense(256) -> Dropout(0.35) -> Dense(64) -> Dropout(0.25) -> Dense(1, sigmoid)",
+  "yamnet_base": "tfhub/google/yamnet/1",
+  "field_holdout_f1": 0.9801,
+  "field_holdout_recall": 0.9933,
+  "field_holdout_precision": 0.9673,
+  "sha256_mlp": "517ec2c6c1e889145c7cae0a3967c9b1c97bdba82d8e7696af499a3bdde54bd1"
+}
