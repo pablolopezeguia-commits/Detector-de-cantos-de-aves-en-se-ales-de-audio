@@ -1,4 +1,5 @@
-# Detector de cantos de aves en señales de audio
+# Detector de cantos de aves en señales de audio mediante técnicas de procesado de señal aplicadas a la bioacústica
+
 
 Repositorio final del TFG de Pablo López Eguía. El proyecto resuelve una tarea binaria: decidir si una ventana de audio contiene canto de ave o no. La memoria compara dos familias: una línea interpretable con rasgos acústicos manuales y SVM, y una línea profunda con embeddings YAMNet y una MLP. El modelo final se integra en EcoCanto, una herramienta de escritorio para analizar carpetas de audio y exportar resultados trazables.
 
