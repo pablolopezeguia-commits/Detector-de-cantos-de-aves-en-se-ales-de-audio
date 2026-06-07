@@ -69,7 +69,6 @@ pip install -r requirements.txt
 ## Ejecutar EcoCanto
 
 ```powershell
-cd D:\TELECO\TFG\github
 python -m birdsong_detector.ecocanto.app
 ```
 
